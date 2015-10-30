@@ -74,7 +74,7 @@ if(GetSourceRef() == 13370)
     slowness=0;
     ClearDebugModeFlags(0x400);
     iswaiting=1;
-    PlaySoundlocal(offsnd, 1.0, 0, 0x80);
+    PlaySoundLocal(offsnd, 1.0, 0, 0x80);
     SetTimerEx(2.0, 3, 0.0, 0.0);
     SetPulse(1.0);
     
@@ -98,7 +98,7 @@ else if(GetSourceRef() == 13371)
    slowness=1;
    SetDebugModeFlags(0x400);
    iswaiting=1;
-   PlaySoundlocal(onsnd, 1.0, 0, 0x80);
+   PlaySoundLocal(onsnd, 1.0, 0, 0x80);
    effectHandle = newColorEffect(0, 0, 0, 0.200, 0.120, 0.010, 0, 0, 0, 1.0);
    SetTimerEx(0.4, 3, 0.0, 0.0);
    SetPulse(0.2);
@@ -118,7 +118,7 @@ if((GetInv(player, 116) >= 15.0) && (!slowness)) return;
 
 if(slowness)
 {
-PlaySoundlocal(heartsnd, 1.0, 0, 0x80);
+PlaySoundLocal(heartsnd, 1.0, 0, 0x80);
 PrintInt(GetInv(player, 116));
  ChangeInv(player, 116, -1.0);
   if(GetInv(player, 116)==0.0)
